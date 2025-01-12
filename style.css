@@ -1,0 +1,604 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #eceff1; /* Light grayish blue */
+    color: #cddc39; /* Neutral dark text */
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.5); /* Siyah renkte %50 şeffaf */
+}
+.navbar .nav-link {
+    color: #ffffff;
+    font-weight: bold;
+}
+.navbar .nav-link:hover {
+    color: #cddc39; /* Lime accent */
+}
+@media (max-width: 768px) {
+    .site-info {
+        flex-direction: row; /* Mobilde site adı ve sloganı yan yana hizala */
+        gap: 5px;
+    }
+
+    .logo {
+        height: 40px; /* Daha küçük ekranlarda logo boyutunu küçült */
+    }
+}
+.navbar-brand {
+    display: flex;
+    align-items: center; /* Logo ve metni dikey olarak hizalar */
+    justify-content: flex-start; /* Logo ve metni sola hizalar */
+    gap: 10px; /* Logo ile yazılar arasındaki boşluk */
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column; /* Yazıları alt alta hizalar */
+}
+
+.site-name {
+    font-size: 20px; /* Yazı boyutu */
+    font-weight: bold; /* Kalın yazı */
+    color: white; /* Beyaz renk */
+}
+
+.site-slogan {
+    font-size: 14px; /* Daha küçük yazı boyutu */
+    color: #cddc39; /* Lime rengi */
+    font-style: italic; /* Eğik yazı */
+}
+
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background-color: #37474f; /* Muted blue-gray */
+}
+.hero-section video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+.hero-section .overlay {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffffff;
+}
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px #000000;
+}
+.hero-section .slogan {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #cddc39; /* Lime accent */
+}
+.btn-custom {
+    background-color: #004d40; /* Muted dark green */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    margin: 5px;
+    transition: all 0.3s ease-in-out;
+}
+.btn-custom:hover {
+    background-color: #cddc39; /* Lime accent */
+    color: #004d40; /* Inverse on hover */
+}
+
+/* Contact Form */
+form .form-control {
+    border: 1px solid #b0bec5; /* Light gray border */
+    border-radius: 5px;
+    background-color: #f0f4c3; /* Pale yellow-green */
+}
+form .btn-primary {
+    background-color: #004d40; /* Muted dark green */
+    border: none;
+}
+form .btn-primary:hover {
+    background-color: #cddc39; /* Lime accent */
+    color: #004d40;
+}
+
+/* Parallax Section */
+.parallax-section {
+    background: url('../img/parallax.jpg') no-repeat center center/cover;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
+}
+.parallax-section h2 {
+    font-size: 2rem;
+}
+
+/* Footer */
+footer {
+    background-color: #263238; /* Dark blue-gray */
+    color: #ffffff;
+    padding: 20px 0;
+}
+footer a {
+    color: #cddc39; /* Lime accent */
+    text-decoration: none;
+}
+footer a:hover {
+    color: #ffffff;
+}
+
+/* Cookie Banner */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #004d40; /* Muted dark green */
+    color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    z-index: 1000;
+}
+.cookie-banner a {
+    color: #cddc39; /* Lime accent */
+    text-decoration: underline;
+}
+.cookie-banner button {
+    background-color: #cddc39; /* Lime accent */
+    color: #004d40;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.accordion-button {
+    background-color: #e0f7fa;
+    color: #004d40;
+    font-weight: bold;
+}
+.accordion-button:hover {
+    background-color: #004d40;
+    color: #ffffff;
+}
+.accordion-body {
+    background-color: #ffffff;
+    color: #004d40;
+}
+#chat-box {
+    font-family: Arial, sans-serif;
+    z-index: 1000;
+}
+.menu-clock {
+    font-size: 20px; /* Yazı boyutu */
+    font-weight: bold; /* Kalın yazı */
+    color: white; /* Yazı rengini beyaz yapar */
+    background-color: rgba(0, 0, 0, 0.5); /* Şeffaf siyah arka plan */
+    padding: 10px; /* İçerik etrafında boşluk */
+    text-align: center; /* Yazıyı ortaya hizalar */
+    border-radius: 5px; /* Hafif köşe yuvarlama */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+    display: flex; /* Saat ve tarihi yan yana yerleştirir */
+    justify-content: space-between; /* Boşluk ayarı */
+    align-items: center; /* Dikey hizalama */
+}
+
+.about-header {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #004d40;
+    color: white;
+}
+
+.about-header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.about-header p {
+    font-size: 18px;
+    font-style: italic;
+    color: #cddc39;
+}
+
+.about-content .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-content h2 {
+    color: #004d40;
+    margin-bottom: 15px;
+}
+
+.about-content h3 {
+    color: #00796b;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.about-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.about-footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #004d40;
+    color: white;
+    margin-top: 30px;
+}
+
+/* Services Section */
+.services-section .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.service-item {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    max-width: 300px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-item img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.service-item h2 {
+    font-size: 20px;
+    color: #004d40;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    color: #004d40;
+    margin-bottom: 30px;
+}
+
+.testimonial-item {
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #555;
+}
+
+.testimonial-item span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #004d40;
+}
+/* Why Choose Us Section */
+.why-choose-us {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.why-choose-us h2 {
+    color: #004d40;
+    margin-bottom: 30px;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature {
+    max-width: 300px;
+    text-align: center;
+}
+
+.feature img {
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+/* Client Projects Section */
+.client-projects {
+    background-color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.client-projects h2 {
+    color: #004d40;
+    margin-bottom: 30px;
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+.project img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.project h3 {
+    color: #00796b;
+    margin-bottom: 5px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+}
+
+.testimonials h2 {
+    color: #004d40;
+    margin-bottom: 30px;
+}
+
+.testimonial-item {
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #555;
+}
+
+.testimonial-item span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #004d40;
+}
+
+
+/* Contact Header */
+.contact-header {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #004d40;
+    color: white;
+}
+
+.contact-header h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.contact-header p {
+    font-size: 18px;
+    font-style: italic;
+    color: #cddc39;
+}
+
+/* Contact Info Section */
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+}
+
+.info-box h2 {
+    color: #004d40;
+    font-size: 20px;
+}
+
+.info-box p {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Contact Form */
+.contact-form {
+    background-color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact-form h2 {
+    color: #004d40;
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    background-color: #004d40;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.contact-form button:hover {
+    background-color: #cddc39;
+    color: #004d40;
+}
+
+/* Map Section */
+.map-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.map-section h2 {
+    color: #004d40;
+    margin-bottom: 20px;
+}
+
+/* FAQ Section */
+.faq-section {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.faq-section h2 {
+    color: #004d40;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.faq-item h3 {
+    color: #00796b;
+    margin-bottom: 5px;
+}
+
+.faq-item p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Reviews Header */
+.reviews-header {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #004d40;
+    color: white;
+}
+
+.reviews-header h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.reviews-header p {
+    font-size: 18px;
+    font-style: italic;
+    color: #cddc39;
+}
+
+/* Reviews Section */
+.reviews-section {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.reviews-section h2 {
+    color: #004d40;
+    margin-bottom: 30px;
+}
+
+.review-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.review-card p {
+    font-style: italic;
+    color: #555;
+}
+
+.reviewer-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    color: #00796b;
+    font-weight: bold;
+}
+
+/* Rating Section */
+.rating-section {
+    background-color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.rating-section .stars label {
+    font-size: 24px;
+    color: #ffc107;
+    cursor: pointer;
+}
+
+/* Testimonials Gallery */
+.testimonials-gallery {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
